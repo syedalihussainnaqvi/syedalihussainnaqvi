@@ -95,10 +95,14 @@ I also run my own digital ventures, so I understand how AI products behave in th
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=syedalihussainnaqvi&show_icons=true&theme=tokyonight&hide_border=true)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=syedalihussainnaqvi&layout=compact&theme=tokyonight&hide_border=true)
+<img height="180" src="https://github-readme-stats.vercel.app/api?username=syedalihussainnaqvi&show_icons=true&include_all_commits=true&count_private=true&theme=radical&hide_border=true&rank_icon=github" alt="GitHub Stats" />
+<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=syedalihussainnaqvi&layout=donut&langs_count=8&theme=radical&hide_border=true" alt="Top Languages" />
 
-![Streak](https://streak-stats.demolab.com?user=syedalihussainnaqvi&theme=tokyonight&hide_border=true)
+<img src="https://streak-stats.demolab.com?user=syedalihussainnaqvi&theme=radical&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub Streak" />
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=syedalihussainnaqvi&theme=react-dark&hide_border=true&area=true&custom_title=Contribution%20Activity%20Graph" alt="Contribution Activity Graph" />
+
+<img src="https://github-profile-trophy.vercel.app/?username=syedalihussainnaqvi&theme=radical&no-frame=true&no-bg=true&column=7&margin-w=10" alt="GitHub Trophies" />
 
 </div>
 
