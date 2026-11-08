@@ -1,3 +1,20 @@
+# GitHub Profile Kit — Syed Ali Hussain Naqvi
+
+Everything you need in one file. GitHub needs the README and the workflow as two separate files in your repo, so copy each block below into the file named above it.
+
+**Repo:** `syedalihussainnaqvi/syedalihussainnaqvi` (must be Public)
+
+| Part | Create this file in the repo | Copy this block |
+|---|---|---|
+| 1 | `README.md` | Part 1 |
+| 2 | `.github/workflows/profile-automation.yml` | Part 2 |
+| 3 | Secret `METRICS_TOKEN` + first run | Part 3 (steps) |
+
+---
+
+## Part 1 — `README.md`
+
+````markdown
 <div align="center">
 
 # Syed Ali Hussain Naqvi
@@ -95,14 +112,14 @@ I also run my own digital ventures, so I understand how AI products behave in th
 
 <div align="center">
 
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=syedalihussainnaqvi&show_icons=true&include_all_commits=true&count_private=true&theme=radical&hide_border=true&rank_icon=github" alt="GitHub Stats" />
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=syedalihussainnaqvi&layout=donut&langs_count=8&theme=radical&hide_border=true" alt="Top Languages" />
-
 <img src="https://streak-stats.demolab.com?user=syedalihussainnaqvi&theme=radical&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub Streak" />
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=syedalihussainnaqvi&theme=react-dark&hide_border=true&area=true&custom_title=Contribution%20Activity%20Graph" alt="Contribution Activity Graph" />
+<img src="./github-metrics.svg" alt="GitHub Metrics (auto-updated daily)" />
 
-<img src="https://github-profile-trophy.vercel.app/?username=syedalihussainnaqvi&theme=radical&no-frame=true&no-bg=true&column=7&margin-w=10" alt="GitHub Trophies" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/syedalihussainnaqvi/syedalihussainnaqvi/output/github-snake-dark.svg" />
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/syedalihussainnaqvi/syedalihussainnaqvi/output/github-snake.svg" />
+</picture>
 
 </div>
 
@@ -138,3 +155,74 @@ Keywords: Syed Ali Hussain Naqvi, AI Engineer Pakistan, Machine Learning Intern,
 BS Artificial Intelligence, LLM, RAG, Computer Vision, YOLOv8, Flask, MERN Stack, Agentic AI,
 Remote AI Internship, Python Developer, SEO Automation
 -->
+````
+
+---
+
+## Part 2 — `.github/workflows/profile-automation.yml`
+
+One workflow file with two jobs: the metrics card (daily) and the contribution snake (every 12 hours).
+
+````yaml
+name: Profile Automation
+
+on:
+  schedule:
+    - cron: "0 0 * * *"      # every day at 00:00 UTC
+  workflow_dispatch:          # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: syedalihussainnaqvi
+          template: classic
+          filename: github-metrics.svg
+          base: header, activity, community, repositories, metadata
+          config_timezone: Asia/Karachi
+          plugin_languages: yes
+          plugin_languages_sections: most-used
+          plugin_languages_details: bytes-size, percentage
+
+  contribution-snake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+
+      - uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+````
+
+---
+
+## Part 3 — Setup steps (about 5 minutes)
+
+1. **Add the two files** to your `syedalihussainnaqvi/syedalihussainnaqvi` repo:
+   - `README.md` (Part 1)
+   - `.github/workflows/profile-automation.yml` (Part 2)
+2. **Create a token:** GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token. Tick `public_repo` and `read:user`, then copy it.
+3. **Save the token as a secret:** in your profile repo go to Settings → Secrets and variables → Actions → New repository secret. Name it exactly `METRICS_TOKEN` and paste the token.
+4. **Allow write access:** Settings → Actions → General → Workflow permissions → **Read and write permissions** → Save.
+5. **Run it once:** Actions tab → **Profile Automation** → Run workflow. Wait 1-3 minutes until both jobs are green.
+6. **Refresh your profile.** The metrics card and the snake appear, and both update automatically after this.
+
+**Troubleshooting**
+- Broken images right after setup are normal until the first run finishes.
+- If a job fails with a permission error, repeat step 4.
+- If the metrics job fails on the token, check that the secret name is exactly `METRICS_TOKEN`.
+- With only a few contributions so far, the cards will look sparse. They fill up as you commit more.
