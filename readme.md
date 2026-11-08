@@ -71,7 +71,6 @@ Alongside my studies I run my own websites and content channels. That gives me p
 | **X-Ray Analyzer** | Detects bone fractures in X-ray images through a web interface | `YOLOv8` `Flask` `OpenCV` `Google Colab` |
 | **Amazon Clone** | Full-stack e-commerce platform with a complete shopping flow | `MongoDB` `Express` `React` `Node.js` |
 | **VoiceAI Assistant** | Desktop voice assistant with reminders, live news and crypto updates | `Python` `PyQt5` `Speech APIs` |
-| **NexusSEO / RankIQ** | Browser-based SEO platform and AI-powered SEO analysis tool | `JavaScript` `Anthropic API` |
 
 <details>
 <summary><b>🔍 Project details (click to expand)</b></summary>
