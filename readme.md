@@ -26,7 +26,7 @@
 
 ## 📑 Table of Contents
 
-[About](#-about-me) · [Quick Facts](#-quick-facts) · [What I Do](#-what-i-do) · [Projects](#-featured-projects) · [Skills](#-technical-skills) · [Education](#-education) · [Ventures](#-digital-ventures) · [Focus](#-current-focus) · [Contact](#-lets-work-together)
+[About](#-about-me) · [Quick Facts](#-quick-facts) · [What I Do](#-what-i-do) · [Projects](#-featured-projects) · [Skills](#-technical-skills) · [Education](#-education) · [Focus](#-current-focus) · [Contact](#-lets-work-together)
 
 ---
 
@@ -136,17 +136,6 @@ Alongside my studies I run my own websites and content channels. That gives me p
 |---|---|---|
 | **BS Artificial Intelligence** | National University of Modern Languages (NUML), Islamabad | Currently in 5th semester |
 | **Intermediate (ICS)** | KIPS College, Hafizabad | Computer Science stream |
-
----
-
-## 🌐 Digital Ventures
-
-| Venture | Description |
-|---|---|
-| **[HeartRateTech.com](https://heartratetech.com)** | My personal WordPress site for technology and health-tech content |
-| **SyedShoppe.com** | Daily-use home products e-commerce store |
-| **SHOP NOW** | Affiliate blog focused on consumer electronics |
-| **World Tour (YouTube)** | Channel exploring lesser-visited countries |
 
 ---
 
